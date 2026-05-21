@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   try {
     const path = req.url.replace(/^\/api\/proxy/, "") || "/";
-    const target = `https://tecnoverse.framer.website${path}`;
+    const target = `https://flydeepconsult.framer.website/${path}`;
 
     const framerRes = await fetch(target, {
       headers: { "User-Agent": req.headers["user-agent"] || "Vercel-Proxy" }
